@@ -6,6 +6,31 @@
   <title>AiCraftify – Custom GPT Solutions</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<script>
+  const form = document.querySelector("form");
+  const statusMsg = document.getElementById("form-status");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      statusMsg.textContent = "✅ Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      statusMsg.style.color = "red";
+      statusMsg.textContent = "❌ Oops! Something went wrong.";
+    }
+  });
+</script>
+
 <body>
   <header>
     <h1>AiCraftify</h1>
@@ -56,6 +81,8 @@
       <textarea name="message" placeholder="Your Message" required rows="5" style="padding: 10px; border: 1px solid #ccc;"></textarea>
       <button type="submit" style="padding: 10px; background: #333; color: #fff; border: none; cursor: pointer;">Send Message</button>
     </form>
+    <p id="form-status" style="margin-top: 20px; color: green;"></p>
+
   </section>
   
 >>>>>>> d0d9a49 (Initial commit: Added contact form)
