@@ -1,77 +1,168 @@
+/* === GLOBAL STYLES === */
 body {
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    margin: 0;
-    color: #333;
-    text-align: center;
-  }
-  
-  header {
-    background-color: #222;
-    color: white;
-    padding: 2rem 1rem;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  section {
-    padding: 2rem;
-  }
-  
-  .about, .services, .cta {
-    background: white;
-    margin: 1rem auto;
-    max-width: 800px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    border-radius: 12px;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f9f9fb;
+  color: #333;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+ul li {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 240px;
+  font-size: 1rem;
+}
+
+/* === HEADER === */
+header {
+  background: linear-gradient(120deg, #4e54c8, #8f94fb);
+  color: white;
+  padding: 60px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* === SECTIONS === */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about,
+.services,
+.cta {
+  background: white;
+  margin: 1rem auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* === PORTFOLIO === */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.portfolio-item {
+  background: white;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+/* === FORM === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background: #4e54c8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #383ebc;
+}
+
+/* === CALL TO ACTION === */
+.cta {
+  background: #f0f0ff;
+  padding: 40px 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #4e54c8;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #383ebc;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .portfolio-container,
   ul {
-    list-style-type: none;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  li {
-    padding: 0.5rem 0;
+
+  .portfolio-item,
+  ul li {
+    width: 90%;
   }
-  
-  .btn {
-    display: inline-block;
-    background: #007BFF;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 1rem;
+
+  form {
+    width: 90%;
   }
-  
-  footer {
-    padding: 1rem;
-    background: #eee;
-    font-size: 0.9rem;
-  }
-  
-  form input, form textarea {
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-    width: 100%;
-  }
-  
-  form button {
-    background: #007BFF;
-    border: none;
-    border-radius: 5px;
-    padding: 12px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  form button:hover {
-    background: #0056b3;
-  }
-  
+}

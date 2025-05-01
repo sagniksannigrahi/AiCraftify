@@ -5,134 +5,210 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AiCraftify – Custom GPT Solutions</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9fb;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(120deg, #4e54c8, #8f94fb);
+      color: white;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about, .services, .cta {
+      background: white;
+      margin: 1rem auto;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    ul li {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 20px;
+      width: 240px;
+      font-size: 1rem;
+    }
+
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .portfolio-item {
+      background: white;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    button {
+      background: #4e54c8;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #383ebc;
+    }
+
+    .cta {
+      background: #f0f0ff;
+      padding: 40px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #4e54c8;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background: #383ebc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ✅ HERO SECTION -->
-  <header class="hero">
+  <header>
     <h1>AiCraftify</h1>
-    <p>We Build Custom GPT Assistants That Work For You</p>
-    <div class="cta-buttons">
-      <a href="#contact" class="btn">Get Started</a>
-      <a href="#portfolio" class="btn secondary">See Demo</a>
-    </div>
+    <p>Your Custom GPT Automation Partner</p>
   </header>
 
-  <!-- ✅ ABOUT -->
   <section class="about">
     <h2>About Us</h2>
-    <p>We specialize in building custom GPT-based AI assistants tailored for your industry — from real estate to legal, wellness, resumes and beyond. If you're a business owner, we craft AI that speaks *your* language.</p>
+    <p>At AiCraftify, we build custom GPT-based AI assistants that understand your business. From real estate to law, wellness to support — we craft tailored AI that delivers results.</p>
   </section>
 
-  <!-- ✅ HOW IT WORKS -->
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div>
-        <h3>1️⃣ You Choose Your Niche</h3>
-        <p>Select your business type or goal.</p>
-      </div>
-      <div>
-        <h3>2️⃣ We Build the GPT</h3>
-        <p>We craft a custom AI tailored for your workflow.</p>
-      </div>
-      <div>
-        <h3>3️⃣ You Deploy and Grow</h3>
-        <p>Embed it in your site or tool. Watch it work.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ SERVICES -->
   <section class="services">
     <h2>Our Services</h2>
     <ul>
       <li>🏡 Real Estate Agent GPT</li>
       <li>⚖️ Legal Assistant GPT</li>
       <li>🧘 Mental Wellness GPT</li>
-      <li>📄 Resume + Career GPT</li>
+      <li>📄 Resume & Career GPT</li>
       <li>💬 Small Business FAQ GPT</li>
     </ul>
   </section>
 
-  <!-- ✅ PORTFOLIO -->
   <section id="portfolio">
     <h2>Our Portfolio</h2>
-    <p>Real-world GPTs built by us:</p>
-    <div class="portfolio-grid">
-      <div class="card">
+    <div class="portfolio-container">
+      <div class="portfolio-item">
         <h3>🏠 Real Estate Bot</h3>
-        <p>Automates property recommendations and lead gen.</p>
+        <p>Helps users find ideal properties and automates lead management.</p>
       </div>
-      <div class="card">
-        <h3>⚖️ Legal GPT</h3>
-        <p>Client intake, contract review & legal info.</p>
+      <div class="portfolio-item">
+        <h3>⚖️ Legal Assistant</h3>
+        <p>Streamlines client intake, generates legal drafts, and more.</p>
       </div>
-      <div class="card">
+      <div class="portfolio-item">
         <h3>🧠 Wellness GPT</h3>
-        <p>Supports mental health journaling and motivation.</p>
+        <p>Guided journaling, mood tracking, and mindfulness tips via AI.</p>
       </div>
     </div>
   </section>
 
-  <!-- ✅ PRICING -->
-  <section class="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing-cards">
-      <div class="card">
-        <h3>Starter</h3>
-        <p><strong>Free</strong></p>
-        <ul>
-          <li>1 Demo GPT</li>
-          <li>Email Support</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Pro</h3>
-        <p><strong>$49/mo</strong></p>
-        <ul>
-          <li>3 Custom GPTs</li>
-          <li>Priority Support</li>
-          <li>Embed Anywhere</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Enterprise</h3>
-        <p><strong>Custom Quote</strong></p>
-        <ul>
-          <li>Unlimited Assistants</li>
-          <li>Dedicated Dev</li>
-          <li>API Integration</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ✅ CONTACT -->
-  <section id="contact" class="contact">
+  <section id="contact" style="background-color: #eef;">
     <h2>Get in Touch</h2>
     <form action="https://formspree.io/f/xanoqzpy" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="_replyto" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p id="form-status"></p>
+    <p id="form-status" style="margin-top: 20px; color: green;"></p>
   </section>
 
-  <!-- ✅ CTA -->
   <section class="cta">
-    <h2>Ready to Automate?</h2>
-    <p><strong>Let's build your custom GPT today!</strong></p>
-    <a href="mailto:aicraftify@gmail.com" class="btn">Request a Demo</a>
+    <h2>Want a Custom GPT for Your Business?</h2>
+    <p><strong>Request a free demo now!</strong></p>
+    <a href="mailto:aicraftify@gmail.com" class="btn">Request Demo</a>
   </section>
 
-  <!-- ✅ FOOTER -->
   <footer>
     <p>© 2025 AiCraftify. Crafted by Sagnik Sannigrahi.</p>
   </footer>
 
-  <!-- ✅ CONTACT FORM JS -->
   <script>
     const form = document.querySelector("form");
     const statusMsg = document.getElementById("form-status");
